@@ -1,297 +1,55 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,macimum-scale10.0,user-scalable=no">
-<link rel="stylesheet" type="text/css" href="css/normalize.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <title>Campus Collection in Tokyo</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+  </style>
 
-  ga('create', 'UA-72759888-1', 'auto');
-  ga('send', 'pageview');
+  <link rel="stylesheet" type="text/css" href="./スタイルシート/sample.css">
+  <script type="text/javascript" src="スクリプト/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="スクリプト/scroll.js"></script>
 
-</script>
-
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-<script>
-
-$(function(){
-var menu = $('#slide_menu'),
-    menuBtn = $('#button'),
-    body = $(document.body),
-    // .layer もオブジェクト化
-    layer = $('.layer'),
-    menuWidth = menu.outerWidth();
-
-    menuBtn.on('click', function(){
-    body.toggleClass('open');
-        if(body.hasClass('open')){
-            // css で非表示にしていた .layer を表示
-            $(".layer").show();
-            body.animate({'right' : menuWidth }, 300);
-            menu.animate({'right' : 0 }, 300);
-        } else {
-            // .layer を非表示
-            $(".layer").hide();
-            menu.animate({'right' : -menuWidth }, 300);
-            body.animate({'right' : 0 }, 300);
-        }
-    });
-    // .layer をクリック時にもメニューを閉じる
-    layer.on('click', function(){
-            menu.animate({'right' : -menuWidth }, 300);
-            body.animate({'right' : 0 }, 300).removeClass('open');
-            layer.hide();
-    });
-});
-</script>
-<title>Campus Collection Staff</title>
 </head>
+<body id="contents">
+  <img src="./イメージ/title-img.jpg" width="100%" height="100%" alt="">
+  <footer>
+    <a class="button" href="@">スタッフになる！</a>
+  </footer>
 
-<body>
-
-<!--header↓↓↓-->
-<button id="button"><em class="fa fa-bars css-bar"></em></button>
-  <nav id="slide_menu" class="open">
-            <ul>
-            	<li><a href="#">HOME</a></li>
- 		        <li><a href="#col-4">部署紹介</a></li>
-                <li><a href="#col-3">OB・OG紹介</a></li>
-                <li><a href="#col-5">代表メッセージ</a></li>
-                <li><a href="#col-6">募集要項</a></li>
-            </ul>
-  </nav>
-<header id="header">
-	<h1>
-		<a href="#"><img src="img/logo.png"  width="100"  alt="campuscollectionstaff"  class="logo"/></a>
-	</h1>
-</header>
-<footer>
-<a href="http://goo.gl/forms/5sE1brSyDg" target="_blank"><p class="join">スタッフに応募する</p></a>
-</footer>
-<div class="layer"></div>
-<!--main↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-<img src="img/main.jpg" alt="main" id="main" width="359px">
-<img src="img/main_w.png" alt="main" id="main_w">
-<!--main↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
-<div id="wrapper">
-<div id="col-1" class="col">
-<h2 class="h2tx">キャンコレの運営をしませんか？</h2>
-<p class="maintx">
-あなたは今の学生生活に満足していますか？「このままではいけない」と危機感を感じてはいませんか？CAMPUSCOLLECTIONでは少しでも前のめりにいきたい学生に向けて最高の環境を用意しています。合言葉はひとつ「関西で1番、日本で１番のイベントを作ろう。」みなさんが作るイベントで関西の学生を感動させましょう。どうせ１度きりの学生生活。大きなコトにチャレンジして新しい自分に出会いませんか？</p>
-</div><!--col-1_end-->
-
-<div id="col-2" class="col">
-<h2 class="h2tx1 h2c ccmiryo">キャンコレスタッフの魅力</h2>
-
-<img src="img/miryoku_2.png" alt="experience" class="miryoku">
-
-<dl class="midashi">
-<dt>普通の学生生活では味わえない経験</dt>
-<dd>なんとなく過ごす４年間では味わえない、関西最大級の５０００人規模のイベントの制作を通じて企画や営業、クリエイティブなど自分の好きな分野で最大級の成長ができます！</dd>
-</dl>
-<img src="img/miryoku_3.png" alt="experience" class="miryoku">
-<dl class="midashi" id="nakama">
-<dt>最高の仲間ができる</dt>
-<dd>関西のさまざまな大学からスタッフが集まります。そんな様々な学生とイベント制作の中で多くの苦楽を共にすることで一生付き合う仲間ができます。また社会で活躍するOBOGの方との繋がりができます</dd>
-</dl>
-
-<img src="img/miryoku_1.png" alt="experience" class="miryoku">
-<div id="seitcho">
-<dl class="midashi">
-<dt>イベント後も充実のサポート</dt>
-<dd>キャンコレ東京は人材派遣事業を行っている　株式会社CIN GROUP から協賛を得ています。そのためイベント終了後もいわゆる就活のプロからキャンコレの活動をどのようにアピールしていけばいいのかなどの的確なキャリアサポートも受けられます！ </dd>
-</dl>
-</div><!--col-2_end-->
-
-
-
-<div id="col-4" class="col">
-<h2 class="h2tx1 h2c">部署紹介</h2>
-<p class="maintx h2c">CAMPUSCOLLECTIONを支える各部署の簡単な仕事内容の紹介です。<br>ぜひ興味を持った部署に飛び込んでみてください！</p>
-<ul class="busyo">
-<li><a href="section/01.html"><img src="img/busyo-1.png" class="section" alt="企画部"></a></li>
-<li><a href="section/02.html"><img src="img/busyo-2.png" alt="広報部"></a></li>
-<li><a href="section/03.html"><img src="img/busyo-3.png" alt="制作部"></a></li>
+  <ul id="dropmenu">
+  <li><a href="#">HOME</a></li>
+  <li><a href="#busyo">部署紹介</a>
+    <ul>
+      <li><a href="kikaku">企画</a></li>
+      <li><a href="kouhou">広報</a></li>
+      <li><a href="seisaku">制作</a><li>
+    </ul>
+  </li>
+  <li><a href="content3">代表あいさつ</a></li>
+  <li><a href="content4">募集要項</a></li>
 </ul>
-</div><!--colc-4_end-->
+<h1>What's Campus Collection?</h1>
+<div class="text" id="explanation" style="background: url(イメージ/bg096_09.gif);">
 
-
-
-<div id="col-3" class="col">
-<h2 class="h2tx1 h2c">キャンコレ VOICE</h2>
-<p class="maintx h2c">キャンパスコレクションを乗り切ったOB・OGたちがいかにして成長をし、キャンコレでの経験が現在どういきているのかその一部を紹介します。</p>
-<ul id="introduction">
-<li class="introduction">
-<a href="voice/voice00.html">
-<figure>
-<img src="img/voice00.png" width="80" alt="小橋 裕也" class="img">
-<dl class="prtx obog">
-<dt>熱い人が集まる場所。キャンコレ</dt>
-<dd>CC2013 広報統括 / Yuya Kobashi</dd>
-</dl>
-</figure>
-</a>
-</li><!--li1_end-->
-<li class="introduction">
-<a href="voice/voice01.html">
-<figure>
-<img src="img/voice01.png" width="80" alt="丸山 拓人" class="img">
-<dl class="prtx obog">
-<dt>終わった瞬間の達成感と<br>感動は圧倒的</dt>
-<dd>CC2015代表 / Takuto Maruyama</dd>
-</dl>
-</figure>
-</a>
-</li><!--li2_end-->
-<li class="introduction">
-<a href="voice/voice02.html">
-<figure>
-<img src="img/voice02.png" width="80" alt="松村 和樹" class="img">
-<dl class="prtx obog">
-<dt>All starts from there. 全てはここから始まった。</dt>
-<dd>CC2015制作部ディレクター / Kazuki Matsumura</dd>
-</dl>
-</figure>
-</a>
-</li><!--li3_end-->
-<li class="introduction">
-<a href="voice/voice03.html">
-<figure>
-<img src="img/asako.png" width="80" alt="大西 朝子" class="img">
-<dl class="prtx obog">
-<dt>自分を成長させてくれる最高の環境</dt>
-<dd>CC2013企画部統括 / Asako Onishi</dd>
-</dl>
-</figure>
-</a>
-</li><!--li4_end-->
-</ul>
-</div><!--col-3_end-->
-
-<div id="col-5" class="col">
-<h2 class="h2tx1">代表メッセージ</h2>
-<div id="message">
-<img src="img/dashiyo.png" alt="yoshida" class="dashiyo">
-<p class="message">僕がキャンコレに入ってくれるスタッフに感じて欲しい
-最大の魅力とは「環境の変化」です。
-大学生活が180度変わると確信しています。
-キャンコレが関西最大級であり続けるか限り
-普段の学生生活では絶対に出会えなかった人達と出会えます。
-10年という歴史の仲間達、夢中になれる環境に挑戦する機会を
-キャンコレは必ず自分と引き合わせてくれます。
-そんな出会いがもたらせてくれる、やりたいことや発信したいことは
-5000人のお客さんや、その向こうにいる62万人の関西の学生にきっと届く！
-まずは第一歩、勇気をもって踏み出せば道は無限に広がります。
-<br> <span class="yoshida">キャンパスコレクション2016代表　吉田 博貴</span>
-</p>
+  <p>学生だけで運営するファッションイベント<br>
+    東京では初の開催です！<br>
+    楽しい仲間と一緒に最高のイベントを立ち上げませんか？</p>
 </div>
-</div><!--col5_end-->
-
-<div id="col-6" class="col">
-<h2 class="h2tx1">募集要項</h2>
-<p class="maintx">
-常に新しいことに挑戦と気持ちと実行力があれば、
-学年に関係なく新しいセクションを任されるチャンスも
-豊富にあるのがキャンパスコレクションの特徴です。
-成し遂げたいことを頑張れる環境をスタッフに与える
-ことが、キャンコレのミッションだと考えています。
-そんな挑戦と成長意欲のある学生の応募を待っています。</p>
-
-
-<div class="mtg1">
-<h3 class="h4tx">説明会</h3>
- <div class="mtg">
-<h3 class="h4tx">実施日程</h3>
-<table class="tb">
-<tr>
-<td>2016/2/3(水)</td>
-<td>19:00〜</td>
-<td>大学交流センター@西宮北口</td>
-</tr>
-<tr>
-<td>2016/2/12(金)</td>
-<td>19:00〜</td>
-<td>西宮市市民館@阪神西宮</td>
-</tr>
-<tr>
-<td>2016/2/17(水)</td>
-<td>19:00〜</td>
-<td>大学交流センター@阪神西宮</td>
-</tr>
-<tr>
-<td>2016/2/26(水)</td>
-<td>19:00〜</td>
-<td>西宮市市民館@阪神西宮</td>
-</tr>
-</table>
-<p class="atten">※毎週ミーティングが木曜日にあります。</p>
-</div>
-<div class="map_b">
-<h3 class="h4tx">ACCESS MAP</h3>
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13113.312745178464!2d135.3572876!3d34.7473248!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa0f5fddd8b91f1ac!2z44Ki44Kv44K_6KW_5a6u6KW_6aSo!5e0!3m2!1sja!2sjp!4v1453467252533" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="map"></iframe>
-<p class="address">阪急西宮北口駅より北東へ徒歩2分<br> ACTA西宮東館6階 大学交流センター</p>
-</div></div>
-
-
-<div class="mtg1">
-<h3 class="h4tx">説明会兼ミーティング</h3>
- <div class="mtg">
-<h3 class="h4tx">実施日程</h3>
-<table class="tb">
-<tr>
-<td>2016/1/28（木）</td>
-<td>19:00〜</td>
-<td>@阪神西宮</td>
-</tr>
-<tr>
-<td>2016/2/4（木）</td>
-<td>19:00〜</td>
-<td>@阪神西宮</td>
-</tr>
-<tr>
-<td>2016/2/11（木）</td>
-<td>18:00〜</td>
-<td>@阪神西宮</td>
-</tr>
-<tr>
-<td>2016/2/18（木）</td>
-<td>19:00〜</td>
-<td>@阪神西宮</td>
-</tr>
-<tr>
-<td>2016/2/25（木）</td>
-<td>19:00〜</td>
-<td>@阪神西宮</td>
-</tr>
-</table>
-<p class="atten">※毎週ミーティングが木曜日にあります。</p>
-</div>
-<div class="map_b">
-<h3 class="h4tx">ACCESS MAP</h3>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.7347477678977!2d135.33946195082913!3d34.73707988032915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000f25dd57be3a3%3A0xf36772bf7afaba8d!2z44CSNjYyLTA5MTgg5YW15bqr55yM6KW_5a6u5biC5YWt5rmb5a-655S677yR77yQ4oiS77yR77yR!5e0!3m2!1sja!2sjp!4v1453134885697" frameborder="0" style="border:0" allowfullscreen class="map"></iframe>
-<p class="address">西宮市市民会館<br>〒662-0918 兵庫県西宮市六湛寺町10-11<br>0798-33-3111</p></div>
-</div></div><!--col-6_end-->
-
-<div id="col-7" class="col">
-<h2 class="h2tx1">相互リンク</h2>
-<ul class="link">
-<li><a href="http://campuscollection.jp/osaka/" target="_blank"><img src="img/bnr1.png" alt="CCosaka" class="bar"></a></li>
-<li><a href="http://campuscollection.jp/osaka/after_fashion.html" target="_blank"><img src="img/bnr2.png" alt="CCosakaAfterreport" class="bar"></a></li>
-<li><a href="http://campuscollection.jp/fukuoka/" target="_blank"><img src="img/bnr3.png" alt="CCFukuoka" class="bar"></a></li>
-<li><a href="http://campuscollection.jp/fukuoka/after_fashion.html" target="_blank"><img src="img/bnr4.png" alt="CCFukuokaAfterreport" class="bar"></a></li>
-</ul>
-</div>
-
-<p id="copyright">Copyright(C) CAMPUS COLLECTION 2016</p>
-
-</div>
-
-
+<div id="busyo" style="border:10px double #00008b;">
+  <h1>部署紹介</h1>
+  <p>Campus Collectionを作り上げる各部署の仕事を紹介してます。
+    <br>気になる部署をチェックしましょう！</p>
+  <ul class="syoukai">
+    <li><a href="@"><img src="イメージ/arrow071_05.png" width="50" height="50"
+      alt="企画"</a></li>
+      <li><a href="@"><img src="イメージ/arrow071_05.png" width="50" height="50"
+      alt="制作"</a></li>
+        <li><a href="@"><img src="イメージ/arrow071_05.png" width="50" height="50"
+        alt="広報"</a></li>
+      </ul>
+      </div>
+      <div>...</div>
 
 </body>
 </html>
