@@ -11,6 +11,7 @@ body{
   font-family:Raleway, "Hiragino Kaku Gothic ProN",Meiryo,sans-serf;
 }
 
+
 .s_main{
   margin: 20px auto;
   padding: 100px 30px 150px;
@@ -19,6 +20,7 @@ body{
   text-align: center;
   font-family: Raleway,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
   font-size: 4em;
+  color: pink;
 }
 .departments-wrapper{
   display: table;
@@ -107,28 +109,16 @@ i.department-icon {
   .button:hover {
     opacity: 1;
   }
-
+  .s_h2{
+    font-size: 0.7rem;
+  }
   /* --- header --- */
   .header {
     padding-top: 60px;
   }
-  .site-title-sub {
-    font-size: 1.7rem;
-  }
-  .site-title-sub::before,
-  .site-title-sub::after {
+  .departments-wrapper,
+  .department-box{
     display: block;
-    width: 80%;
-    margin: 10px auto;
-  }
-  .site-title {
-    margin-top: 35px;
-    font-size: 5rem;
-  }
-
-  /* --- about --- */
-  .about-text {
-    line-height: 1.8;
   }
 
   /* --- works --- */
