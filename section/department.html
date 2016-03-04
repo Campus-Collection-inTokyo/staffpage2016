@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,macimum-scale10.0,user-scalable=no" minimum-scale=1.0>
 <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+
 <link rel="stylesheet" type="text/css" href="normalize2.css">
-<link rel="stylesheet" type="text/css" href="../css/style.css">
 <link rel="stylesheet" type="text/css" href="section.css">
 <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -21,65 +21,31 @@
 
 </script>
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>-->
-<script>
 
-$(function(){
-var menu = $('#slide_menu'),
-    menuBtn = $('#button'),
-    body = $(document.body),
-    // .layer もオブジェクト化
-    layer = $('.layer'),
-    menuWidth = menu.outerWidth();
-
-    menuBtn.on('click', function(){
-    body.toggleClass('open');
-        if(body.hasClass('open')){
-            // css で非表示にしていた .layer を表示
-            $(".layer").show();
-            body.animate({'right' : menuWidth }, 300);
-            menu.animate({'right' : 0 }, 300);
-        } else {
-            // .layer を非表示
-            $(".layer").hide();
-            menu.animate({'right' : -menuWidth }, 300);
-            body.animate({'right' : 0 }, 300);
-        }
-    });
-    // .layer をクリック時にもメニューを閉じる
-    layer.on('click', function(){
-            menu.animate({'right' : -menuWidth }, 300);
-            body.animate({'right' : 0 }, 300).removeClass('open');
-            layer.hide();
-    });
-});
-</script>
 
 <title>Campus Collection staff</title>
-</head>
+
 
 <body>
 <!--header↓↓↓-->
-<button id="button"><em class="fa fa-bars css-bar"></em></button>/*main*/
-  <nav id="slide_menu" class="open">
-            <ul>
-            	<li><a href="../index.html">HOME</a></li>
- 		        <li><a href="../index.html#col-4">部署紹介</a></li>
-                <li><a href="../index.html#col-3">OB・OG紹介</a></li>
-                <li><a href="../index.html#col-5">代表メッセージ</a></li>
-                <li><a href="../index.html#col-6">募集要項</a></li>
-            </ul>
-  </nav>
-<header id="header">
-	<h1>
-		<a href="../index.html"><img src="../img/logo.png"  width="100"  alt="campuscollectionstaff"  class="logo"/></a>
-	</h1>
-</header>
+  <div class="top">
+    <ul id="dropmenu">
+      <li><a href="../index.html">HOME</a></li>
+      <li><a href="">DEPARTMENT</a>
+        <ul>
+          <li><a href="#kikaku-link" class="kyoku">企画</a></li>
+          <li><a href="#kouhou-link" class="kyoku">広報</a></li>
+          <li><a href="#seisaku-link" class="kyoku">制作</a><li>
+        </ul>
+      </li>
+      <li><a href="../index.html#daihyo">MESSAGE</a></li>
+      <li><a href="../index.html#contact">CONTACT</a></li>
+    </ul>
 
-<footer>
-<a href="http://goo.gl/forms/5sE1brSyDg" target="_blank"><p class="join">スタッフに応募する</p></a>
 
-</footer>
+    <img src="./img/title-img.jpg" width="100%" height="100%" alt="">
 
+  </div>
 <div id="section_wrapper">
 <div class="s_main">
 <h1 class="s_h1">DEPARTMENT</h1>
@@ -95,28 +61,22 @@ CAMPUSCOLLECTIONを通じて新しい自分に出会いませんか？</p>
       <div class="department-box" >
         <a href="#kikaku-link">
           <i class="department-icon fa fa-lightbulb-o"></i>
-          <div class="department-title">企画</div>
-          <p class="department-text">
-            キャッチこpー
-          </p>
+          <div class="department-title"><a>企画</a></div>
+
         </a>
       </div>
       <div class="department-box" href="#kouhou-link">
         <a href="#kouhou-link">
           <i class="department-icon fa fa-twitter"></i>
-          <div class="department-title">広報</div>
-          <p class="department-text">
-            キャッチこpー
-          </p>
+          <div class="department-title"><a>広報</a></div>
+
         </a>
       </div>
       <div class="department-box " href="seisaku-link">
         <a href="#seisaku-link">
           <i class="department-icon fa fa-gavel"></i>
-          <div class="department-title">制作</div>
-          <p class="department-text">
-            キャッチこpー
-          </p>
+          <div class="department-title"><a>制作</a></div>
+
         </a>
       </div>
     </div>
@@ -265,6 +225,11 @@ CAMPUSCOLLECTIONを通じて新しい自分に出会いませんか？</p>
 </section>
 
 
+<footer>
+  <div class="footer-button">
+    <a class=""  href="https://docs.google.com/forms/d/1a3oMlHf0KBqZCLZIuxJQwF5nLNpaKF4t_chzDYTtDTs/viewform?c=0&w=1">スタッフorモデルに応募する</a>
+  </div>
+</footer>
 
 
 
